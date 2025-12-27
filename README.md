@@ -1,0 +1,2 @@
+- fix image not updating when drag dropping in square
+- make a favicon
