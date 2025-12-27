@@ -1,106 +1,103 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
 
-  color-scheme: dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #1a1b1e;
+	color-scheme: dark;
+	color: #c0caf5; /* Tokyo Night Text */
+	background-color: #1a1b26; /* Tokyo Night Background */
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  height: 100vh; /* Fixed height */
-  overflow: hidden; /* Prevent scrolling */
-  justify-content: center;
+	margin: 0;
+	display: flex;
+	place-items: center;
+	min-width: 320px;
+	height: 100vh; /* Fixed height */
+	overflow: hidden; /* Prevent scrolling */
+	justify-content: center;
 }
 
 #app {
-  width: 100%;
-  height: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 1rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; /* Center vertically */
-  gap: 1rem;
-  box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 1rem;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center; /* Center vertically */
+	gap: 1rem;
+	box-sizing: border-box;
 }
 
 h1 {
-  font-size: 2em; /* Smaller title */
-  line-height: 1.1;
-  margin: 0;
-  background: linear-gradient(to right, #646cff, #a481ff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+	font-size: 2em; /* Smaller title */
+	line-height: 1.1;
+	margin: 0;
+	color: #7aa2f7;
 }
 
 .subtitle {
-  color: #888;
-  margin: 0;
-  font-size: 0.9em;
+	color: #565f89; /* Tokyo Night Muted */
+	margin: 0;
+	font-size: 0.9em;
 }
 
 .canvas-container {
-  padding: 0.5rem;
-  background: #25262b;
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 1; /* Allow shrinking */
-  min-height: 0; /* Important for flex child shrinking */
-  max-height: 80vh; /* Leave space for headers/controls */
+	padding: 0.5rem;
+	background: #24283b; /* Tokyo Night Surface */
+	border-radius: 12px;
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 1; /* Allow shrinking */
+	min-height: 0; /* Important for flex child shrinking */
+	max-height: 80vh; /* Leave space for headers/controls */
 }
 
 canvas {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 4px;
-  cursor: pointer;
-  object-fit: contain;
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+	border-radius: 4px;
+	cursor: pointer;
+	object-fit: contain;
 }
 
 .controls {
-  margin-top: 0.5rem;
+	margin-top: 0.5rem;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 600;
-  font-family: inherit;
-  background-color: #646cff;
-  color: white;
-  cursor: pointer;
-  transition: all 0.25s;
+	border-radius: 8px;
+	border: 1px solid transparent;
+	padding: 0.6em 1.2em;
+	font-size: 1em;
+	font-weight: 600;
+	font-family: inherit;
+	background-color: #7aa2f7; /* Tokyo Night Blue */
+	color: #1a1b26; /* Dark Text for contrast on bright button */
+	cursor: pointer;
+	transition: all 0.25s;
 }
 
 button:hover {
-  background-color: #535bf2;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(83, 91, 242, 0.3);
+	background-color: #7dcfff; /* Cyan on hover */
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(122, 162, 247, 0.3);
 }
 
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+	outline: 4px auto #bb9af7;
 }

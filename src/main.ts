@@ -41,14 +41,12 @@ class GridApp {
 	}
 
 	private setupEventListeners() {
-		// Prevent default drag behaviors
 		["dragenter", "dragover", "dragleave", "drop"].forEach((eventName) => {
 			this.canvas.addEventListener(eventName, this.preventDefaults, false);
 		});
 
 		this.canvas.addEventListener("drop", this.handleDrop.bind(this), false);
 
-		// Click to upload
 		this.canvas.addEventListener("click", this.handleClick.bind(this), false);
 		this.fileInput.addEventListener(
 			"change",
@@ -225,7 +223,7 @@ class GridApp {
 
 	private draw() {
 		// Background
-		this.ctx.fillStyle = "#1a1b1e"; // Dark background
+		this.ctx.fillStyle = "#1a1b26"; // Tokyo Night Background
 		this.ctx.fillRect(0, 0, this.gridWidth, this.gridHeight);
 
 		// Draw images
@@ -249,7 +247,7 @@ class GridApp {
 
 				// Draw warning if tainted
 				if (this.taintedIndices.has(i)) {
-					this.ctx.fillStyle = "rgba(255, 0, 0, 0.7)";
+					this.ctx.fillStyle = "rgba(247, 118, 142, 0.7)"; // Tokyo Night Red
 					this.ctx.fillRect(x + this.cellWidth - 40, y + 10, 30, 30);
 					this.ctx.fillStyle = "#fff";
 					this.ctx.font = "bold 24px Arial";
@@ -261,7 +259,7 @@ class GridApp {
 		}
 
 		// Draw grid lines
-		this.ctx.strokeStyle = "#ffffff";
+		this.ctx.strokeStyle = "#c0caf5"; // Tokyo Night Text/White-ish
 		this.ctx.lineWidth = 4;
 		this.ctx.beginPath();
 
@@ -279,7 +277,7 @@ class GridApp {
 
 		// Draw empty state text if no images
 		if (this.images.every((img) => img === null)) {
-			this.ctx.fillStyle = "#666";
+			this.ctx.fillStyle = "#565f89"; // Tokyo Night Muted
 			this.ctx.font = "30px Inter, sans-serif";
 			this.ctx.textAlign = "center";
 			this.ctx.textBaseline = "middle";

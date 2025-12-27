@@ -6,6 +6,11 @@
 - **Lint**: No dedicated script; `tsc` checks types.
 - **Test**: Not currently configured.
 
+## Deployment
+- **Platform**: GitHub Pages via GitHub Actions.
+- **Workflow**: `.github/workflows/deploy.yml` builds and deploys on push to `main`.
+- **Config**: `vite.config.ts` sets `base: './'` for relative path support.
+
 ## Code Style & Conventions
 - **Language**: TypeScript (ES2022 target, ESNext modules).
 - **Package Manager**: Bun (`bun.lock` present). Use `bun install/add`.
